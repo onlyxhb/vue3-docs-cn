@@ -90,7 +90,7 @@ function useToggleFn(
         <a
           class="switch-link"
           title="关于 API 风格偏好"
-          href="/guide/introduction.html#api-styles"
+          href="/vue3-docs-cn/guide/introduction.html#api-styles"
           @click="closeSideBar"
           >?</a
         >
@@ -107,7 +107,7 @@ function useToggleFn(
         <a
           class="switch-link"
           title="关于单文件组件"
-          href="/guide/scaling-up/sfc.html"
+          href="/vue3-docs-cn/guide/scaling-up/sfc.html"
           @click="closeSideBar"
           >?</a
         >
@@ -206,11 +206,11 @@ function useToggleFn(
     font-size: 11px;
     padding: 8px 4px;
   }
-  
+
   .vt-switch {
     margin: auto;
   }
-  
+
   .switch-link {
     margin-left: auto;
   }

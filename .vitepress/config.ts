@@ -15,7 +15,7 @@ const nav = [
       { text: '互动教程', link: '/tutorial/' },
       { text: '示例', link: '/examples/' },
       { text: '快速上手', link: '/guide/quick-start' },
-      // { text: '风格指南', link: '/style-guide/' },
+      { text: '风格指南', link: '/style-guide/' },
       {
         text: 'Vue 2 文档',
         link: 'https://v2.cn.vuejs.org'
@@ -590,6 +590,7 @@ const i18n = {
 export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
 
+  base: '/vue3-docs-cn/',
   lang: 'zh-CN',
   title: 'Vue.js',
   description: 'Vue.js - 渐进式的 JavaScript 框架',

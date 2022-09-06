@@ -24,7 +24,7 @@ onMounted(async () => {
     <p class="actions">
       <!-- NOTE: hide the home video -->
       <!-- <vue-mastery-modal /> -->
-      <a class="get-started" href="/guide/introduction.html">
+      <a class="get-started" href="/vue3-docs-cn/guide/introduction.html">
         快速上手
         <svg
           class="icon"
@@ -38,7 +38,7 @@ onMounted(async () => {
           />
         </svg>
       </a>
-      <a class="setup" href="/guide/quick-start.html">安装</a>
+      <a class="setup" href="/vue3-docs-cn/guide/quick-start.html">安装</a>
     </p>
   </section>
 

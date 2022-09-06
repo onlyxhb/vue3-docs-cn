@@ -9,8 +9,8 @@
     "serve": "vitepress serve",
     "zhlint": "zhlint 'src/{api,about,guide,sponsor,translations,tutorial}/**/*.md'",
     "clean": "rm -rf .vitepress/dist",
-    "sync": "node scripts/sync.js",
-    "preinstall": "npx only-allow pnpm"
+    "deploy": "sh deploy.sh",
+    "sync": "node scripts/sync.js"
   },
   "dependencies": {
     "@vue/repl": "^1.2.4",
@@ -30,15 +30,5 @@
     "simple-git": "^2.48.0",
     "zhlint": "^0.6.1",
     "terser": "^5.14.2"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@algolia/client-search",
-        "react",
-        "react-dom",
-        "@types/react"
-      ]
-    }
   }
 }
