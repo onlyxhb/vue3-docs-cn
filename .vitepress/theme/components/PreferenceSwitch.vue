@@ -11,9 +11,9 @@ import {
 
 const route = useRoute()
 const show = $computed(() =>
-  /^\/(guide|tutorial|examples)\//.test(route.path)
+  /^\/vue3-docs-cn\/(guide|tutorial|examples)\//.test(route.path)
 )
-const showSFC = $computed(() => !/^\/guide/.test(route.path))
+const showSFC = $computed(() => !/^\/vue3-docs-cn\/guide/.test(route.path))
 
 let isOpen = $ref(true)
 
