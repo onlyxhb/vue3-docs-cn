@@ -51,7 +51,7 @@ const awesome = ref(true)
 
 一个 `v-else` 元素必须跟在一个 `v-if` 或者 `v-else-if` 元素后面，否则它将不会被识别。
 
-### `v-else-if` {#v-else-if}
+## `v-else-if` {#v-else-if}
 
 顾名思义，`v-else-if` 提供的是相应于 `v-if` 的“else if 区块”。它可以连续多次重复使用：
 
@@ -98,7 +98,7 @@ const awesome = ref(true)
 
 `v-show` 不支持在 `<template>` 元素上使用，也不能和 `v-else` 搭配使用。
 
-## `v-if` vs `v-show` {#v-if-vs-v-show}
+## `v-if` vs. `v-show` {#v-if-vs-v-show}
 
 `v-if` 是“真实的”按条件渲染，因为它确保了在切换时，条件区块内的事件监听器和子组件都会被销毁与重建。
 
@@ -111,7 +111,7 @@ const awesome = ref(true)
 ## `v-if` 和 `v-for` {#v-if-with-v-for}
 
 ::: warning 警告
-同时使用 `v-if` 和 `v-for` 是**不推荐的**，因为这样二者的优先级不明显。请查看[风格指南](/style-guide/#avoid-v-if-with-v-for-essential)获得更多信息。
+同时使用 `v-if` 和 `v-for` 是**不推荐的**，因为这样二者的优先级不明显。请查看[风格指南](/style-guide/rules-essential.html#avoid-v-if-with-v-for)获得更多信息。
 :::
 
 当 `v-if` 和 `v-for` 同时存在于一个元素上的时候，`v-if` 会首先被执行。请查看[列表渲染指南](list#v-for-with-v-if)获取更多细节。

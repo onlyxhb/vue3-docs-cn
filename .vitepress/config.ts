@@ -6,7 +6,7 @@ import baseConfig from '@vue/theme/config'
 import { headerPlugin } from './headerMdPlugin'
 import { jobsPlugin } from './jobsMdPlugin'
 
-const nav = [
+const nav: ThemeConfig['nav'] = [
   {
     text: '文档',
     activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
@@ -52,7 +52,7 @@ const nav = [
         text: '官方库',
         items: [
           { text: 'Vue Router', link: 'https://router.vuejs.org/zh/' },
-          { text: 'Pinia', link: 'https://pinia.vuejs.org/' },
+          { text: 'Pinia', link: 'https://pinia.vuejs.org/zh/' },
           { text: '工具链指南', link: '/guide/scaling-up/tooling.html' }
         ]
       },
@@ -123,7 +123,7 @@ const nav = [
   }
 ]
 
-export const sidebar = {
+export const sidebar: ThemeConfig['sidebar'] = {
   '/guide/': [
     {
       text: '开始',
@@ -551,7 +551,7 @@ export const sidebar = {
   ]
 }
 
-const i18n = {
+const i18n: ThemeConfig['i18n'] = {
   search: '搜索',
   menu: '菜单',
   toc: '本页目录',
@@ -575,13 +575,16 @@ const i18n = {
   },
 
   // aria labels
-  ariaAnnouncer: {
+  // TODO:
+  // update the key to `ariaAnnouncer` after new `@vue/theme` released
+  // https://github.com/vuejs/theme/issues/75
+  ariaAnnouner: {
     before: '',
     after: '已经加载完毕'
   },
   ariaDarkMode: '切换深色模式',
-  ariaSkip: '直接跳到内容',
-  ariaTOC: '当前页面的目录',
+  ariaSkipToContent: '直接跳到内容',
+  ariaToC: '当前页面的目录',
   ariaMainNav: '主导航',
   ariaMobileNav: '移动版导航',
   ariaSidebarNav: '侧边栏导航',
@@ -640,6 +643,24 @@ export default defineConfigWithTheme<ThemeConfig>({
     sidebar,
     i18n,
 
+    localeLinks: [
+      {
+        link: 'https://vuejs.org',
+        text: 'English',
+        repo: 'https://github.com/vuejs/docs'
+      },
+      {
+        link: 'https://ja.vuejs.org',
+        text: '日本語',
+        repo: 'https://github.com/vuejs-translations/docs-ja'
+      },
+      {
+        link: '/translations/',
+        text: '帮助我们翻译！',
+        isTranslationsDesc: true
+      }
+    ],
+
     algolia: {
       indexName: 'vuejs_cn2',
       appId: 'UURH1MHAF7',
@@ -655,7 +676,6 @@ export default defineConfigWithTheme<ThemeConfig>({
     // },
 
     socialLinks: [
-      { icon: 'languages', link: '/translations/' },
       { icon: 'github', link: 'https://github.com/vuejs/' },
       { icon: 'twitter', link: 'https://twitter.com/vuejs' },
       { icon: 'discord', link: 'https://discord.com/invite/HBherRA' }

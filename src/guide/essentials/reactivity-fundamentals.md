@@ -75,7 +75,7 @@ import { reactive } from 'vue'
 const state = reactive({ count: 0 })
 ```
 
-响应式对象其实是 [JavaScript Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)，其行为表现与一般对象相似。不同之处在于 Vue 能够跟踪对响应式对象属性的访问与更改操作。如果你对这其中的细节感到好奇，我们在 [深入响应式系统](/guide/extras/reactivity-in-depth.html) 一章中会进行解释，但我们推荐你先读完这里的主要指南。
+响应式对象其实是 [JavaScript Proxy](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy)，其行为表现与一般对象相似。不同之处在于 Vue 能够跟踪对响应式对象属性的访问与更改操作。如果你对这其中的细节感到好奇，我们在 [深入响应式系统](/guide/extras/reactivity-in-depth.html) 一章中会进行解释，但我们推荐你先读完这里的主要指南。
 
 TypeScript 用户请参阅：[为响应式对象标注类型](/guide/typescript/composition-api.html#typing-reactive) <sup class="vt-badge ts" />
 
@@ -101,7 +101,7 @@ export default {
 <div>{{ state.count }}</div>
 ```
 
-自然，我们也可以在同一个作用域下定义一个更新 `state` 的函数，并作为一个方法与 `state` 一起暴露出去：
+自然，我们也可以在同一个作用域下定义一个更新响应式状态的函数，并作为一个方法与状态一起暴露出去：
 
 ```js{7-9,14}
 import { reactive } from 'vue'
@@ -131,7 +131,7 @@ export default {
 </button>
 ```
 
-### `<script setup>` \*\*
+### `<script setup>` \*\* {#script-setup}
 
 在 `setup()` 函数中手动暴露大量的状态和方法非常繁琐。幸运的是，我们可以通过使用构建工具来简化该操作。当使用单文件组件（SFC）时，我们可以使用 `<script setup>` 来大幅度地简化代码。
 
@@ -214,7 +214,7 @@ export default {
 
 ### DOM 更新时机 {#dom-update-timing}
 
-当你更改响应式状态后，DOM 会自动更新。然而，你得注意 DOM 的更新并不是同步的。相反，Vue 将缓冲它们直到更新周期的 “下个时机” 以确保无论你进行了多少次状态更改，每个组件都只需要更新一次。
+当你更改响应式状态后，DOM 会自动更新。然而，你得注意 DOM 的更新并不是同步的。相反，Vue 将缓冲它们直到更新周期的 “下个时机” 以确保无论你进行了多少次状态更改，每个组件都只更新一次。
 
 若要等待一个状态改变后的 DOM 更新完成，你可以使用 [nextTick()](/api/general.html#nexttick) 这个全局 API：
 

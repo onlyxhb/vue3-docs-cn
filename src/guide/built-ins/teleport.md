@@ -1,4 +1,4 @@
-# Teleport
+# Teleport {#teleport}
 
 <VueSchoolLink href="https://vueschool.io/lessons/vue-3-teleport" title="Teleport - 免费的 Vue.js 课程"/>
 
@@ -21,7 +21,7 @@
 </div>
 ```
 
-接下来我们来看看 `modal-button` 的实现。
+接下来我们来看看 `<MyModal>` 的实现：
 
 <div class="composition-api">
 

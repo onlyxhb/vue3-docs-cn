@@ -41,7 +41,7 @@ const multiSelected = ref([])
 
 - 文本类型的 `<input>` 和 `<textarea>` 元素会绑定 `value` property 并侦听 `input` 事件；
 - `<input type="checkbox">` 和 `<input type="radio">` 会绑定 `checked` property 并侦听 `change` 事件；
-- `<select>` 会绑定 `value` property 并侦听 `change` 事件：
+- `<select>` 会绑定 `value` property 并侦听 `change` 事件。
 
 ::: tip 注意
 `v-model` 会忽略任何表单元素上初始的 `value`、`checked` 或 `selected` attribute。它将始终将当前绑定的 JavaScript 状态视为数据的正确来源。你应该在 JavaScript 中使用<span class="options-api"> `data` 选项</span><span class="composition-api">响应式系统的 API </span>来声明该初始值。
@@ -425,7 +425,7 @@ export default {
 
 ## 修饰符 {#modifiers}
 
-### `.lazy`
+### `.lazy` {#lazy}
 
 默认情况下，`v-model` 会在每次 `input` 事件后更新数据 ([IME 拼字阶段的状态](#vmodel-ime-tip)例外)。你可以添加 `lazy` 修饰符来改为在每次 `change` 事件后更新数据：
 

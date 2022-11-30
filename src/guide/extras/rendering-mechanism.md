@@ -8,7 +8,7 @@ Vue 是如何将一份模板转换为真实的 DOM 节点的，又是如何高�
 
 ## 虚拟 DOM {#virtual-dom}
 
-你可能已经听说过虚拟 DOM 的概念了，Vue 的渲染系统正是基于这个概念构建的。
+你可能已经听说过“虚拟 DOM”的概念了，Vue 的渲染系统正是基于这个概念构建的。
 
 虚拟 DOM (Virtual DOM，简称 VDOM) 是一种编程概念，意为将目标所需的 UI 通过数据结构“虚拟”地表示出来，保存在内存中，然后将真实的 DOM 与之保持同步。这个概念是由 [React](https://reactjs.org/) 率先开拓，随后在许多不同的框架中都有不同的实现，当然也包括 Vue。
 
@@ -36,9 +36,9 @@ const vnode = {
 
 ## 渲染管线 {#render-pipeline}
 
-从高层面的视角看，Vue 组件挂载后发生了如下这几件事：
+从高层面的视角看，Vue 组件挂载时会发生如下几件事：
 
-1. **编译**：Vue 模板被编译为了**渲染函数**：即用来返回虚拟 DOM 树的函数。这一步骤可以通过构建步骤提前完成，也可以通过使用运行时编译器即时完成。
+1. **编译**：Vue 模板被编译为**渲染函数**：即用来返回虚拟 DOM 树的函数。这一步骤可以通过构建步骤提前完成，也可以通过使用运行时编译器即时完成。
 
 2. **挂载**：运行时渲染器调用渲染函数，遍历返回的虚拟 DOM 树，并基于它创建实际的 DOM 节点。这一步会作为[响应式副作用](./reactivity-in-depth)执行，因此它会追踪其中所用到的所有响应式依赖。
 
@@ -48,7 +48,7 @@ const vnode = {
 
 <!-- https://www.figma.com/file/elViLsnxGJ9lsQVsuhwqxM/Rendering-Mechanism -->
 
-## 模板 vs. 渲染函数 {#template-vs-render-functions}
+## 模板 vs. 渲染函数 {#templates-vs-render-functions}
 
 Vue 模板会被预编译成虚拟 DOM 渲染函数。Vue 也提供了 API 使我们可以不使用模板编译，直接手写渲染函数。在处理高度动态的逻辑时，渲染函数相比于模板更加灵活，因为你可以完全地使用 JavaScript 来构造你想要的 vnode。
 
